@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bacon Digital Labs LLC — Lead Flow &amp; Dispensary Commerce Systems</title>
+<title>Bacon Digital Labs LLC — Lead Flow, Dispensary Commerce &amp; Websites</title>
 <meta name="description" content="Bacon Digital Labs LLC is a founder-led technology practice based in Arlington, Washington, offering a Lead Flow Reliability Sprint for local service businesses, Dispensary Commerce & Care for Washington's recreational dispensaries, and Website Launch & Care for SMB and new-business clients.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M6 20 L11 20 L14 12 L18 24 L21 14 L24 20 L26 20' fill='none' stroke='%23f59e0b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/styles.css">
@@ -104,7 +104,33 @@
       <h2 class="section-kicker">Not sure which fits?</h2>
       <p class="section-lede">Send a short note about what you're trying to solve, and we'll point you to the right practice—or let you know if it's outside what we do.</p>
       <div class="contact-card">
-        <a class="btn btn-primary btn-lg" href="mailto:hello@bacondigitallabs.com?subject=General%20inquiry">Email hello@bacondigitallabs.com</a>
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" data-service="General">
+          <input type="hidden" name="access_key" value="45bedcc8-f1c3-451a-a8f3-dafe3cbdc71d">
+          <input type="hidden" name="subject" value="General inquiry">
+          <input type="hidden" name="from_name" value="Bacon Digital Labs website">
+          <input type="hidden" name="service" value="General">
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-field form-field-full">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-phone">Phone (optional)</label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9\s\+\-\.\(\)]{7,}" title="Enter a phone number, e.g. 360-555-0123">
+          </div>
+          <div class="form-field form-field-full">
+            <label for="cf-message">What do you need help with?</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="e.g. We're opening a second location and need a website plus a better way to track new inquiries."></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary btn-lg" type="submit">Send message</button>
+          </div>
+        </form>
+        <p class="form-status" id="contactStatus" role="status" aria-live="polite" tabindex="-1"></p>
         <p class="contact-note">We typically reply within one business day.</p>
       </div>
     </div>
